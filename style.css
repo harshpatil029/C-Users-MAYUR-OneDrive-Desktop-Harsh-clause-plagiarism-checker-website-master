@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #b86f3f, #33b794, #d6cd21, #cdccce);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  color: antiquewhite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 35px;
+  background-color: #151515;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added a subtle box-shadow */
+  border: 4px solid #23d723; /* Changed border color */
+  border-radius: 10px;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #23d723; /* Changed border color */
+  border-radius: 6px; /* Reduced border radius for a more reliable look */
+  background-color: #1c1c1c; /* Added a background color */
+  color: #f0f0f0; /* Adjusted text color */
+  font-size: 16px; /* Increased font size for better readability */
+  resize: vertical; /* Allow vertical resizing */
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #33ff33;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #23d723;
+  color: #fff;
+  border: 1px solid black;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #075ce3;
+  transform: scale(1.05);
+}
+
+.results {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slide down effect */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover .results {
+  opacity: 1;
+  transform: translateY(0);
+}
